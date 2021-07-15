@@ -7,15 +7,11 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/hello")
+@RequestMapping("")
 public class HelloController {
-    @GetMapping ("/{number}")
-    public String printHello(Model modelMap,@RequestParam Integer number) {
+    @GetMapping ("")
+    public String printHello(Model modelMap,@RequestParam(defaultValue = "0") Float number) {
         modelMap.addAttribute("inbox", number*=23000);
-        return "hello";
-    }
-    @GetMapping()
-    public String main(Model modelMap) {
         return "hello";
     }
 }

@@ -11,12 +11,14 @@
         <title>Title</title>
     </head>
     <body>
-        <form name="testForm" action="/hello/?number={number}">
-            <br/>
-            <input type="int" name="number"/>
+        <h1>Chuyen tien</h1>
+        <form name="testForm"  method="get">
+            <h3>VND</h3>
+            <input type="int" name="number" placeholder=${inbox} />
             <br/>
             <input type="submit"/>
         </form>
-        <h2>${inbox}</h2>
+        <h3>USD</h3>
+        <p>${inbox}$</p>
     </body>
 </html>
